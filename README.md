@@ -1,7 +1,7 @@
-Inventory Management System
+**Inventory Management System**
 This is a simple web-based inventory management system for managing products in a store. It allows users to add, edit, and delete products from the inventory.
 
-Features
+**Features**
 Add Product: Add a new product to the inventory with details such as product name, category, quantity, and price.
 Edit Product: Edit existing product details including product name, category, quantity, and price.
 Delete Product: Remove a product from the inventory. Provides a confirmation dialog before deletion.
@@ -15,22 +15,14 @@ MySQL: Database management system for storing product information.
 Bootstrap: Frontend framework for responsive design and styling.
 Chart.js: JavaScript library for creating interactive charts.
 
-Import the donut_db.sql file into your MySQL database to create the necessary tables.
+**Usage**
+1. Add Product: Click on the "Add Product" button and fill in the required details. Click "Add" to add the product to the inventory.
 
-Update the database connection parameters in the PHP files (add_product.php, display_products.php, update_product.php, delete_product.php) with your MySQL credentials.
+2. Edit Product: Click on the edit icon next to the product you want to edit. Update the details and click "Update" to save changes.
 
-Ensure that your web server (e.g., Apache, Nginx) is configured to serve PHP files.
+3. Delete Product: Click on the delete icon next to the product you want to delete. Confirm the deletion in the confirmation dialog.
 
-Access the application through your web browser.
-
-Usage
-Add Product: Click on the "Add Product" button and fill in the required details. Click "Add" to add the product to the inventory.
-
-Edit Product: Click on the edit icon next to the product you want to edit. Update the details and click "Update" to save changes.
-
-Delete Product: Click on the delete icon next to the product you want to delete. Confirm the deletion in the confirmation dialog.
-
-Display Products: View all products in the inventory with their details including product name, category, quantity, and price.
+4. Display Products: View all products in the inventory with their details including product name, category, quantity, and price.
 
 Screenshots
 

@@ -2,11 +2,17 @@
 This is a simple web-based inventory management system for managing products in a store. It allows users to add, edit, and delete products from the inventory.
 
 **Features**
+
 Add Product: Add a new product to the inventory with details such as product name, category, quantity, and price.
+
 Edit Product: Edit existing product details including product name, category, quantity, and price.
+
 Delete Product: Remove a product from the inventory. Provides a confirmation dialog before deletion.
+
 Display Products: View all products in the inventory with their details in a table format.
+
 Responsive Design: The system is designed to be responsive and works well on various screen sizes.
+
 Technologies Used
 HTML/CSS: Frontend design and layout.
 JavaScript: Client-side scripting for interactive features such as confirmation dialog.

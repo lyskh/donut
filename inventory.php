@@ -8,7 +8,7 @@ $database = "donut_db";
 // Create connection
 $connection = new mysqli($servername, $username, $password, $database);
 
-// Connection check
+// Check connection
 if ($connection->connect_error) {
     die("Connection failed: " . $connection->connect_error);
 }
@@ -38,10 +38,15 @@ $connection->close();
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <title>Inventory Management System</title>
@@ -50,8 +55,23 @@ $connection->close();
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 20px;
-        background-color: #fff;
+       /*  background-color: #fff; */
       }
+          /* Custom font */
+    body, h1, h2, h3, h4, h5, h6, .card-header, .card-body, .card-title, .card-text {
+      font-family: 'Poppins', sans-serif;
+     /*  font-weight: bold; */
+      font-size: 1em; /* Adjust the font size as needed */
+    }
+    .text-justify {
+      text-align: justify;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .number {
+      font-size: 1.2em; /* Adjust the font size of numbers */
+    }
   
       h2 {
         margin-bottom: 20px;
@@ -71,7 +91,7 @@ $connection->close();
         flex-grow: 1;
       }
       .card1 {
-        background: linear-gradient(to bottom, ##ECF0F1 );
+        background: linear-gradient(to bottom, #ECF0F1 );
         border: 1px solid #ccc;
         width: 580px;
         height: 550px;
@@ -244,12 +264,23 @@ $connection->close();
 
   // Create the data object for the pie chart
   var data = {
-    labels: productNames,
-    datasets: [{
-      data: productQuantities,
-      backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'] // You can customize colors here
-    }]
-  };
+  labels: productNames,
+  datasets: [{
+    data: productQuantities,
+    backgroundColor: [
+      '#34495e', // Dark slate gray
+      '#16a085', // Dark cyan
+      '#2ecc71', // Green
+      '#3498db', // Dark blue
+      '#f1c40f', // Yellow
+      '#e67e22', // Dark orange
+      '#e74c3c', // Dark red
+      '#9b59b6', // Dark purple
+      '#1abc9c', // Light cyan
+      '#f39c12'  // Orange
+    ]
+  }]
+};
 
   // Get the canvas element
   var ctx = document.getElementById('pieChart').getContext('2d');

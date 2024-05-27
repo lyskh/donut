@@ -1,31 +1,49 @@
 *{
-
+ /* Sidebar */
 .sidebar-card {
-    position: fixed;
-    background: linear-gradient(to bottom, #343a40, #95cf97);
-    color: #fff;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 200px;
-    z-index: 100;
-    overflow-y: auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-right: 20px; /* Add margin to prevent overlapping */
-    border-radius: none;
-  }
-  /* Custom styles for sidebar links */
-  .sidebar-link {
-    display: block;
-    padding: .5rem 1rem;
-    color: #ffffff;
-    text-decoration: none;
-  }
-  .sidebar-link:hover {
-    background-color: #e9ecef; /* Light gray hover background */
-    color: #223020;
-    text-decoration: none;
-  }
+  position: fixed;
+  background: #1a1a1a; /* Dark background color */
+  color: #fff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 200px; /* Increased width for more content */
+  z-index: 100;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding-top: 20px; /* Add padding to the top */
+  overflow-x: hidden; /* Hide the vertical scrollbar */
+}
+
+/* Sidebar title */
+.sidebar-card .card-title {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Sidebar links */
+.sidebar-link {
+  display: block;
+  padding: 10px 20px;
+  color: #ccc; /* Lighter text color */
+  text-decoration: none;
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.sidebar-link:hover {
+  color: #fff; /* Hover color */
+}
+
+/* Active link */
+.sidebar-link.active {
+  color: #fff; /* Active link color */
+}
+
+/* Icon */
+.sidebar-link i {
+  margin-right: 10px; /* Add space between icon and text */
+}
   /* Custom styles for dashboard cards */
   .dashboard-card {
     margin-bottom: 20px;

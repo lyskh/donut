@@ -38,7 +38,7 @@ if (mysqli_num_rows($result) > 0) {
                 <td>{$row['price']}</td>
                 <td class='actions'>
                     <a href='update_product.php?id={$row['product_id']}'><i class='fas fa-edit'></i></a>
-                    <a href='delete_product.php?id={$row['product_id']}'><i class='fas fa-trash-alt'></i></a>
+                    <a href='delete_product.php?id={$row['product_id']}' onclick='return confirmDelete();'><i class='fas fa-trash-alt'></i></a>
                 </td>
               </tr>";
     }
@@ -50,3 +50,10 @@ if (mysqli_num_rows($result) > 0) {
 // Close connection
 $connection->close();
 ?>
+
+<script>
+// JavaScript function to confirm product deletion
+function confirmDelete() {
+    return confirm("Are you sure you want to delete this product?");
+}
+</script>
